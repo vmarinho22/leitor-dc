@@ -22,10 +22,15 @@ def handleReadArchives(relativePathFiles):
     return archivesNames
 
 def handleProcessData(archivesList):
+    # Varre o array de arquivos
+    archiveCount = 0
     for archive in archivesList:
+        # Abre o arquivo na memoria e varre linha a linha
         with open(archive) as file:
+            count = 0
             while fileLine := file.readline():
-                print(fileLine.rstrip())
+                line = fileLine.rstrip()
+        archiveCount++
 
 
 main()
